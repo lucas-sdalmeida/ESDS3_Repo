@@ -25,10 +25,14 @@ typedef struct {
 /****************************************************************************
                                     Funcoes
  ****************************************************************************/
-int emptyq(queue *ptq) {
-    if (ptq->front == ptq->rear)
-        return 1;
+int initializequeue(queue *ptq) {
+    ptq->front = -1;
+    ptq->rear = -1;
     return 0;
+}
+
+int emptyq(queue *ptq) {
+    return (ptq->front == -1 && ptq->rear == -1) ? 1 : 0;
 }
 
 int insertq(queue *ptq, int x) {
@@ -47,15 +51,14 @@ int removeq(queue *ptq) {
     if (emptyq(ptq))
         return -1;
     int x = ptq->items[ptq->front++];
-    if (ptq->front == QUEUEMAXLENGTH - 1)
+    if (ptq->front == QUEUEMAXLENGTH - 1) {
         ptq->front = 0;
+        if (ptq->rear == QUEUEMAXLENGTH -1)
+            initializequeue(ptq);
+    }
+    if (ptq->front == ptq->rear + 1)
+        initializequeue(ptq);
     return x;
-}
-
-int initializequeue(queue *ptq) {
-    ptq->front = -1;
-    ptq->rear = -1;
-    return 0;
 }
 
 
