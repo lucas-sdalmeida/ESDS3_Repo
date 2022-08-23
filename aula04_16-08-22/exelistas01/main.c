@@ -39,7 +39,18 @@ int initializeList(IntList list) {
     return 0;
 }
 
-IntNode *searchElement(IntList list, int k);
+int isEmpty(IntList list) {
+    return (list->nextNode == NULL) ? 1 : 0;
+}
+
+IntNode *searchElement(IntList list, int k) {
+    if (isEmpty(list))
+        return NULL;
+    IntNode *node = list->nextNode;
+    while (node && node->value != k)
+        node = node->nextNode;
+    return node;
+}
 
 int insertElement(IntList list, int k);
 
