@@ -12,57 +12,9 @@ Descrição:
 #include <stdio.h>
 #include <stdlib.h>
 
-
-/******************************************************************************
-                                    Structs 
- ******************************************************************************/
-struct stack {
-    /*
-    
-    */
-};
-
-struct queue {
-    /*
-    
-    */
-};
-
-
-struct list {
-    /*
-    
-    */
-}
-
-struct headed_list {
-
-};
-
-struct doubly_linked_list {
-    /*
-    
-    */
-};
-
-struct headed_doubly_linked_list {
-    /*
-    
-    */
-};
-
-struct circular_list {
-    /*
-    
-    */
-};
-
-struct doubly_circular_list {
-    /*
-    
-    */
-};
-
+#include "estruturas\lists.h";
+#include "estruturas\queue.h";
+#include "estruturas\lists.h";
 
 /******************************************************************************
                                     Funcoes 
