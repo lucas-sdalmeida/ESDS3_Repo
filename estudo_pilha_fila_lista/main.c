@@ -12,9 +12,9 @@ Descrição:
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "estruturas\lists.h"
-#include "estruturas\queue.h"
-#include "estruturas\lists.h"
+#include "estruturas\lists.c"
+#include "estruturas\queue.c"
+#include "estruturas\stack.c"
 
 /******************************************************************************
                                     Funcoes 
