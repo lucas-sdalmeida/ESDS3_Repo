@@ -1,6 +1,8 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <stdlib>
+
 struct list_node {
     /*
     
