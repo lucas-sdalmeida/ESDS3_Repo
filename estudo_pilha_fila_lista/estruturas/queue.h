@@ -20,6 +20,7 @@ typedef struct queue {
         - Inserir valor;
         - Remover valor;
         - Verificar se esta vazia;
+        - Apagar fila;
     */
 
     int *values;
@@ -28,11 +29,14 @@ typedef struct queue {
 } queue;
 
 
-queue *new_queue(int length);
+queue *new_queue(int len);
 
 int insert(queue *ptq, int value);
 
 int remove(queue *ptq);
 
 int is_empty(queue *ptq);
+
+int destroy_queue(queue *ptq);
+
 #endif
